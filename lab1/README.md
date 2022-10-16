@@ -23,14 +23,15 @@ Here we display the execution times of the A* algorithm we developed
 | **Iteration \ N** | **5** | **10** | **20** | **100**           | **500**           | **1000**          |
 |-------------------|-------|--------|--------|-------------------|-------------------|-------------------|
 | w                 | 5     | 10     | 23     | could not compute | could not compute | could not compute |
-| 1                 | 4 solution steps; 60 visited states   | 6 steps; 1,096 states   | 6 steps; 470,898 states   |                   |                   |                   |
-| 2                 | 5 steps; 42 states   | 6 steps; 1,126 states    | 6 steps; 437,832 states   |                   |                   |                   |
-| 3                 | 5 steps; 33 states   | 5 steps; 748 states    | 6 steps; 469,067 states   |                   |                   |                   |
-| 4                 | 5 steps; 42 states   | 5 steps; 1,715 states    | 6 steps; 538,164 states   |                   |                   |                   |
-| 5                 | 5 steps; 59 states   | 5 steps; 1,287 states   | 6 steps; 477,490 states   |                   |                   |                   |
-| 6                 | 5 steps; 33 states   | 5 steps; 1,021 states    | 6 steps; 438,632 states   |                   |                   |                   |
-| 7                 | 5 steps; 42 states   | 4 steps; 749 states    | 6 steps; 517,984 states   |                   |                   |                   |
-| 8                 | 4 steps; 35 states   | 5 steps; 2,025 states   | 6 steps; 433,693 states   |                   |                   |                   |
-| 9                 | 6 steps; 81 states   | 5 steps; 1,171 states    | 6 steps; 483,435 states   |                   |                   |                   |
-| 10                | 5 steps; 33 states   | 6 steps; 1,235 states    | 6 steps; 446,306 states   |                   |                   |                   |
-| Average           | 5 steps; 46 states   | 5 steps; 1217 stetes    | 6 steps; 471,350 states  |                   |                   |                   |
+| 1                 | 4 solution steps; 60 visited states   | 6 solution steps; 1,096 visited states   | 6 solution steps; 470,898 visited states   |                   |6 solution steps; 1,056 visited states; w: 96| 6 solution steps; 2,126 visited states; w: 186| 9 solution steps; 28,925 visited states; w: 3014| 2                 | 5 solution steps; 42 visited states   | 6 solution steps; 1,126 visited states    | 6 solution steps; 437,832 visited states   |                   |                   |                   |
+| 3                 | 5 solution steps; 33 visited states   | 5 solution steps; 748 visited states    | 6 solution steps; 469,067 visited states   |                   |                   |                   |
+| 4                 | 5 solution steps; 42 visited states   | 5 solution steps; 1,715 visited states    | 6 solution steps; 538,164 visited states   |                   |                   |                   |
+| 5                 | 5 solution steps; 59 visited states   | 5 solution steps; 1,287 visited states   | 6 solution steps; 477,490 visited states   |                   |                   |                   |
+| 6                 | 5 solution steps; 33 visited states   | 5 solution steps; 1,021 visited states    | 6 solution steps; 438,632 visited states   |                   |                   |                   |
+| 7                 | 5 solution steps; 42 visited states   | 4 solution steps; 749 visited states    | 6 solution steps; 517,984 visited states   |                   |                   |                   |
+| 8                 | 4 solution steps; 35 visited states   | 5 solution steps; 2,025 visited states   | 6 solution steps; 433,693 visited states   |                   |                   |                   |
+| 9                 | 6 solution steps; 81 visited states   | 5 solution steps; 1,171 visited states    | 6 solution steps; 483,435 visited states   |                   |                   |                   |
+| 10                | 5 solution steps; 33 visited states   | 6 solution steps; 1,235 visited states    | 6 solution steps; 446,306 visited states   |                   |                   |                   |
+| Average           | 5 solution steps; 46 visited states   | 5 solution steps; 1217 visited stetes    | 6 solution steps; 471,350 visited states  |                   |                   |                   |
+
+For N = [100, 500, 1000] we were not able to find a proper optimization of the algorithm to find the optimal solution in a reasonable amount of time so we tried to use a unitary cost for all the edges and we noticed that, as expected the algorithm was really fast but the solution was not the optimal one in fact we have an exponential increasing of the bloat as we can see from the results reported in the table. A possible approach for further and future implementation could be the pruning of the graph in terms of depth. 
