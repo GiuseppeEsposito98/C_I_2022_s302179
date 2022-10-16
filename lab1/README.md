@@ -1,5 +1,5 @@
 # LAB 1: Set Covering
-### Francesco Scalera, Giuseppe Esposito, Filippo Maria Cardano (s292113)
+### Francesco Scalera(S...), Giuseppe Esposito(S302179), Filippo Maria Cardano (S292113)
 
 Given a number N and some lists of integers P = (L_0, L_1, L_2, ..., L_n),
 determine, if possible, S = (L_{s_0}, L_{s_1}, L_{s_2}, ..., L_{s_n}),
