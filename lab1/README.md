@@ -1,5 +1,5 @@
 # LAB 1: Set Covering
-### Francesco Scalera(S...), Giuseppe Esposito(S302179), Filippo Maria Cardano (S292113)
+### Francesco Scalera(S292432), Giuseppe Esposito(S302179), Filippo Maria Cardano (S292113)
 
 Given a number N and some lists of integers P = (L_0, L_1, L_2, ..., L_n),
 determine, if possible, S = (L_{s_0}, L_{s_1}, L_{s_2}, ..., L_{s_n}),
@@ -18,7 +18,8 @@ In particular, our implementation concerns:
 
 ## Results
 
-Here we display the execution times of the A* algorithm we developed
+Here we display for our A* algorithm the number of steps it took to find a solution, the number of visited states and the weight of the final solution i.e. the sum of lenght of the internal lists.
+The tests were repeated 10 times.
 
 | **Test \ N** | **5** | **10** | **20** | **100**           | **500**           | **1000**          |
 |-------------------|-------|--------|--------|-------------------|-------------------|-------------------|
