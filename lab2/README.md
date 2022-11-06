@@ -20,10 +20,10 @@ The functions for mutation and crossover are based on the onemax example from th
 
 ## Main parameters
 We performed a grid search based on a dictionary with the following parameters:
-    N: problem size
-    POPULATION_SIZE: size of the initial population and of the population after the pruning
-    OFFSPRING_SIZE: number of offsprings generated at each iteration before pruning
-    ITERATIONS: number of generations
+    - N: problem size
+    - POPULATION_SIZE: size of the initial population and of the population after the pruning
+    - OFFSPRING_SIZE: number of offsprings generated at each iteration before pruning
+    - ITERATIONS: number of generations
 
 
 
