@@ -28,12 +28,3 @@ We performed a grid search based on a dictionary with the following parameters:
 
 
 
-# reference al codice del professore
-# creazione della popolazione
-# metrica di fitness
-# check_feasibile cosa significa feasible per noi
-# numero di iterazioni
-# come calcoliamo la mutation probability
-# reference al codice del professore per funzione mutation e crossover
-# rimuoviamo i duplicati dalla nuova popolazione dopo il merge con l'offspring pool
-
