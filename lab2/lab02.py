@@ -56,7 +56,7 @@ def calculate_mutation_probability(best_candidate, N):
 best_candidate_option = ""
 
 def calculate_mutation_probabilityDet2(best_candidate, N, best_candidate_list):
-    ''' this function in case of steady state detection the system is forced to change genetic operator in order to do again some exploration'''
+    ''' In case of steady state detection the system is forced to change genetic operator in order to do again some exploration'''
     global best_candidate_option
 
     probability_selected = 0.5
