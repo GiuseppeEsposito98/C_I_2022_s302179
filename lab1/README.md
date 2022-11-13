@@ -23,7 +23,7 @@ The tests were repeated 10 times.
 
 | **Test \ N** | **5** | **10** | **20** | **100**           | **500**           | **1000**          |
 |-------------------|-------|--------|--------|-------------------|-------------------|-------------------|
-|  Average w                 | 5     | 10     | 23     | 90 | 1264 | 300,470 |
+|  Average w                 | 5     | 10     | 23     | 120 | 1264 | 300,470 |
 | 1                 | 4 solution steps; 60 visited states   | 6 solution steps; 1,096 visited states   | 6 solution steps; 470,898 visited states   |6 solution steps; 1,056 visited states|6 solution steps; 2,126 visited states| 9 solution steps; 28,925 visited states| 
 | 2                 | 5 solution steps; 42 visited states   | 6 solution steps; 1,126 visited states    | 6 solution steps; 437,832 visited states   |5 solution steps; 847 visited states; w: 80|6 solution steps; 2,126 visited states; w: 173|9 solution steps; 28,925 visited states; w: 3077|
 | 3                 | 5 solution steps; 33 visited states   | 5 solution steps; 748 visited states    | 6 solution steps; 469,067 visited states   |5 solution steps; 847 visited states|6 solution steps; 2,126 visited states|9 solution steps; 28,925 visited states|
