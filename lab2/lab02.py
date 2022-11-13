@@ -9,12 +9,14 @@ import time
 # Function for the problem 
 def problem(N, seed=42):
     """Generates the problem, also makes all blocks generated unique"""
+    state = random.getstate()
     random.seed(seed)
     blocks_not_unique = [
-        list(set(random.randint(0, N - 1) for n in range(random.randint(N // 5, N // 2))))
-        for n in range(random.randint(N, N * 5))
+        list(set(random.randint(0, N - 1) for _ in range(random.randint(N // 5, N // 2))))
+        for __ in range(random.randint(N, N * 5))
     ]
     blocks_unique = np.unique(np.array(blocks_not_unique, dtype=object))
+    random.setstate(state)
     return blocks_unique.tolist()
 
 def check_feasibile(individual, N):
@@ -39,7 +41,6 @@ def select_parent(population, tournament_size = 2):
     subset = random.choices(population, k = tournament_size)
     return max(subset, key=lambda i: i [0])
 
-    return min(subset, key=lambda i: i [0])
 # genetic operators
 def cross_over(g1,g2, len_):
     '''one cut crossover'''
@@ -102,14 +103,10 @@ def calculate_mutation_probabilityDet2(best_candidate, N, best_candidate_list):
 
 # Parameters for the grid search
 PARAMETERS = {
-    "N":[20],#, 100, 500, 1000, 5000],
+    "N":[50],#, 100, 500, 1000, 5000],
     "POPULATION_SIZE":[50],#, 200, 300, 500, 600, 1000, 2000, 3000, 5000],
-    "OFFSPRING_SIZE":[int(30*2/3)]#, int(200*2/3), int(300*2/3), int(500*2/3), int(600*2/3), int(1000*2/3), int(2000*2/3), int(3000*2/3), 5000*(2/3)]
-    # number of iterations? as 1000 is too small for some N values
-    "N":[20, 100, 500, 1000, 5000],
-    "POPULATION_SIZE":[50, 200, 300, 500, 600, 1000, 2000, 3000, 5000],
-    "OFFSPRING_SIZE":[int(50*2/3), int(200*2/3), int(300*2/3), int(500*2/3), int(600*2/3), int(1000*2/3), int(2000*2/3), int(3000*2/3), 5000*(2/3)]
-}
+    "OFFSPRING_SIZE":[int(50*2/3)]#, int(200*2/3), int(300*2/3), int(500*2/3), int(600*2/3), int(1000*2/3), int(2000*2/3), int(3000*2/3), 5000*(2/3)]
+    }
 
 # Parameter grid setup
 configurations = {"configurations": []}
@@ -120,10 +117,12 @@ for config in my_configs:
 
 random.seed(42)
 
-with open("results.csv", "a") as csvf:
+
+with open("results.csv", "w") as csvf:
     header="N,POPULATION_SIZE,OFFSPRING_SIZE,Fitness,Time\n"
     csvf.write(header)
 
+with open("results.csv", "a") as csvf:
     for idx in tqdm(range(len(configurations["configurations"]))):
 
         config = configurations["configurations"][idx]
