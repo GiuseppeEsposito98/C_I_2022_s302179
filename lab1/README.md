@@ -23,7 +23,7 @@ The tests were repeated 10 times.
 
 | **Test \ N** | **5** | **10** | **20** | **100**           | **500**           | **1000**          |
 |-------------------|-------|--------|--------|-------------------|-------------------|-------------------|
-|  Average w                 | 5     | 10     | 23     | 120 | 1264 | 300,470 |
+|  Average w                 | 5     | 10     | 23     | 194 | 1264 | 300,470 |
 | 1                 | 4 solution steps; 60 visited states   | 6 solution steps; 1,096 visited states   | 6 solution steps; 470,898 visited states   |6 solution steps; 1,056 visited states|6 solution steps; 2,126 visited states| 9 solution steps; 28,925 visited states| 
 | 2                 | 5 solution steps; 42 visited states   | 6 solution steps; 1,126 visited states    | 6 solution steps; 437,832 visited states   |5 solution steps; 847 visited states; w: 80|6 solution steps; 2,126 visited states; w: 173|9 solution steps; 28,925 visited states; w: 3077|
 | 3                 | 5 solution steps; 33 visited states   | 5 solution steps; 748 visited states    | 6 solution steps; 469,067 visited states   |5 solution steps; 847 visited states|6 solution steps; 2,126 visited states|9 solution steps; 28,925 visited states|
@@ -36,4 +36,4 @@ The tests were repeated 10 times.
 | 10                | 5 solution steps; 33 visited states   | 6 solution steps; 1,235 visited states    | 6 solution steps; 446,306 visited states   |5 solution steps; 847 visited states| 6 solution steps; 2,126 visited states|9 solution steps; 28,925 visited states|
 | Average           | 5 solution steps; 46 visited states   | 5 solution steps; 1217 visited states    | 6 solution steps; 471,350 visited states  |5 solution steps; 888 visited states|6 solution steps; 2,126 visited states|9 solution steps; 28,925 visited states|
 
-For N = [100, 500, 1000] we were not able to find a proper optimization of the algorithm to find the optimal solution in a reasonable amount of time so we tried to use a unitary cost for all (uninformed strategy) the edges and we noticed that, as expected the algorithm was really fast but the solution was not the optimal one in fact we have an exponential increasing of the bloat as we can see from the results reported in the table. A possible approach for further and future implementation could be the pruning of the graph in terms of depth. 
+For N = [100, 500, 1000] we were not able to find a proper optimization of the algorithm to find the optimal solution in a reasonable amount of time so we tried to use a unitary cost for all (greedy best first) the edges and we noticed that, as expected the algorithm was really fast but the solution was not the optimal one in fact we have an exponential increasing of the bloat as we can see from the results reported in the table. A possible approach for further and future implementation could be the pruning of the graph in terms of depth. 
